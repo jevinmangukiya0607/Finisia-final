@@ -9,7 +9,7 @@ export default function ApplyForm() {
     const [email, setEmail] = useState("");
     const [amountrequired, setAmountrequired] = useState("");
     const [phone, setPhone] = useState("");
-    const [message, setMessage] = useState("");
+    const [monthlyincome, setMonthlyincome] = useState("");
 
     //   Form validation
     const [errors, setErrors] = useState({});
@@ -52,8 +52,8 @@ export default function ApplyForm() {
             tempErrors["phone"] = true;
             isValid = false;
         }
-        if (message.length <= 0) {
-            tempErrors["message"] = true;
+        if (monthlyincome.length <= 0) {
+            tempErrors["monthlyincome"] = true;
             isValid = false;
         }
 
@@ -80,7 +80,7 @@ export default function ApplyForm() {
                     cityname: cityname,
                     amountrequired: amountrequired,
                     statename: statename,
-                    message: message,
+                    monthlyincome: monthlyincome,
                 }),
                 headers: {
                     "Content-Type": "application/json",
@@ -98,7 +98,7 @@ export default function ApplyForm() {
                 // Reset form fields
                 setFirstname("");
                 setEmail("");
-                setMessage("");
+                setMonthlyincome("");
                 setPhone("");
                 setAmountrequired("");
                 setLastname("");
@@ -112,31 +112,28 @@ export default function ApplyForm() {
             // Reset form fields
             setFirstname("");
             setEmail("");
-            setMessage("");
+            setMonthlyincome("");
             setPhone("");
             setAmountrequired("");
             setLastname("");
             setCityname("");
             setStatename("");
         }
-        console.log(firstname, lastname, phone, cityname, statename, amountrequired, email, message);
+        console.log(firstname, lastname, phone, cityname, statename, amountrequired, email, monthlyincome);
     };
 
     return (
-        <div className="flex items-center flex-col relative justify-between py-[4rem] pb-[1rem] md:py-[5rem] px-4 sm:px-10 relative md:mx-32 bg-[#fbfbfb] rounded-xl">
-            <div className="flex items-center justify-center w-full">
-                <p className="text-base md:text-xl">
-                    Your search for the ideal personal loan ends here   <span className='text-[#1E5EF3] font-semibold'> Apply Below </span>
-                </p>
-            </div>
+
             <div className="flex items-center justify-center w-full">
                 <form className="flex flex-col w-full" onSubmit={handleSubmit}>
                     <div className='row mt-4 md:mt-10 w-full flex flex-wrap items-start justify-evenly'>
                         <div className="flex flex-col w-full md:w-2/5 lg:w-1/5 ">
+                        <label for="amountrequires" className="text-sm mb-1 ml-1 mt-4 md:mt-4 lg:mt-0">Amount Required</label>
                             <select value={amountrequired}
                                 onChange={(e) => {
                                     setAmountrequired(e.target.value);
-                                }} name="amountrequired" id="amountrequired" className="border  mt-4 md:mt-4 lg:mt-0 w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3">
+                                }} name="amountrequired" id="amountrequired" className="border   w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3">
+                                <option value="" disabled selected hidden>Amount Required</option>
                                 <option value="0-5">0-5 lakhs</option>
                                 <option value="5-10">5-10 lakhs</option>
                                 <option value="10-15">10-15 lakhs</option>
@@ -149,6 +146,7 @@ export default function ApplyForm() {
                             )}
                         </div>
                         <div className="flex flex-col w-full md:w-2/5 lg:w-1/5 ">
+                        <label for="firstname" className="text-sm mb-1 ml-1 mt-4 md:mt-4 lg:mt-0">First Name</label>
                             <input
                                 id='firstname'
                                 type='text'
@@ -156,7 +154,7 @@ export default function ApplyForm() {
                                 onChange={(e) => {
                                     setFirstname(e.target.value);
                                 }}
-                                className="border  mt-4 md:mt-4 lg:mt-0 w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
+                                className="border   w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
                                 placeholder='First Name'
                                 required
                             />
@@ -165,6 +163,7 @@ export default function ApplyForm() {
                             )}
                         </div>
                         <div className="flex flex-col w-full md:w-2/5 lg:w-1/5 ">
+                        <label for="lastname" className="text-sm mb-1 ml-1 mt-4 md:mt-4 lg:mt-0">Last Name</label>
                             <input
                                 id='lastname'
                                 type='text'
@@ -172,7 +171,7 @@ export default function ApplyForm() {
                                 onChange={(e) => {
                                     setLastname(e.target.value);
                                 }}
-                                className="border  mt-4 md:mt-4 lg:mt-0 w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
+                                className="border   w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
                                 placeholder='Last Name'
                                 required
                             />
@@ -181,6 +180,7 @@ export default function ApplyForm() {
                             )}
                         </div>
                         <div className="flex flex-col w-full md:w-2/5 lg:w-1/5 ">
+                        <label for="phone" className="text-sm mb-1 ml-1 mt-4 md:mt-4 lg:mt-0">Phone Number</label>
                             <input
                                 id='phone'
                                 type='tel'
@@ -188,7 +188,7 @@ export default function ApplyForm() {
                                 onChange={(e) => {
                                     setPhone(e.target.value);
                                 }}
-                                className="border  mt-4 md:mt-4 lg:mt-0 w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
+                                className="border   w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
                                 placeholder='Phone Number'
                                 pattern="[0-9]{10}"
                                 required
@@ -200,6 +200,7 @@ export default function ApplyForm() {
                     </div>
                     <div className='row lg:mt-10 w-full flex flex-wrap items-start justify-evenly'>
                         <div className="flex flex-col w-full md:w-2/5 lg:w-1/5 ">
+                        <label for="email" className="text-sm mb-1 ml-1 mt-4 md:mt-4 lg:mt-0 ">Email</label>
                             <input
                                 id='email'
                                 type='email'
@@ -207,7 +208,7 @@ export default function ApplyForm() {
                                 onChange={(e) => {
                                     setEmail(e.target.value);
                                 }}
-                                className="border mt-4 md:mt-4 lg:mt-0 w-full rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
+                                className="border w-full rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
                                 placeholder='Email'
                                 required
                             />
@@ -216,6 +217,7 @@ export default function ApplyForm() {
                             )}
                         </div>
                         <div className="flex flex-col w-full md:w-2/5 lg:w-1/5 ">
+                        <label for="city" className="text-sm mb-1 ml-1 mt-4 md:mt-4 lg:mt-0">City</label>
                             <input
                                 id='city'
                                 type='text'
@@ -223,7 +225,7 @@ export default function ApplyForm() {
                                 onChange={(e) => {
                                     setCityname(e.target.value);
                                 }}
-                                className="border  mt-4 md:mt-4 lg:mt-0 w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
+                                className="border   w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
                                 placeholder='City'
                                 required
                             />
@@ -232,6 +234,7 @@ export default function ApplyForm() {
                             )}
                         </div>
                         <div className="flex flex-col w-full md:w-2/5 lg:w-1/5 ">
+                        <label for="state" className="text-sm mb-1 ml-1 mt-4 md:mt-4 lg:mt-0">State</label>
                             <input
                                 id='state'
                                 type='text'
@@ -239,7 +242,7 @@ export default function ApplyForm() {
                                 onChange={(e) => {
                                     setStatename(e.target.value);
                                 }}
-                                className="border  mt-4 md:mt-4 lg:mt-0 w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
+                                className="border   w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
                                 placeholder='State'
                                 required
                             />
@@ -248,19 +251,21 @@ export default function ApplyForm() {
                             )}
                         </div>
                         <div className="flex flex-col w-full md:w-2/5 lg:w-1/5 ">
-                            <input
-                                id='message'
-                                type='text'
-                                value={message}
+                        <label for="monthlyincome" className="text-sm mb-1 ml-1 mt-4 md:mt-4 lg:mt-0">Monthly Income</label>
+                        <select value={monthlyincome}
                                 onChange={(e) => {
-                                    setMessage(e.target.value);
-                                }}
-                                className="border mt-4 md:mt-4 lg:mt-0 w-full rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3"
-                                placeholder='Message'
-
-                            />
-                            {errors?.message && (
-                                <p className="text-red-500">Message cannot be empty.</p>
+                                    setAmountrequired(e.target.value);
+                                }} name="monthlyincome" id="monthlyincome" className="border   w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3">
+                                <option value="" disabled selected hidden>Monthly Income</option>
+                                <option value="0-30000">30,000 below</option>
+                                <option value="30000-35000">30,000 - 35,000</option>
+                                <option value="35001-45000">35,001 - 45,000</option>
+                                <option value="45001-75000">45,001 - 75,000</option>
+                                <option value="75001-150000">75,001 - 150,000</option>
+                                <option value="150000+">150,000 +</option>
+                            </select>
+                            {errors?.monthlyincome && (
+                                <p className="text-red-500">Monthly Income cannot be empty.</p>
                             )}
                         </div>
                         <div className='row mt-12 w-full flex flex-wrap items-center justify-evenly'>
@@ -283,6 +288,5 @@ export default function ApplyForm() {
                     </div>
                 </form >
             </div >
-        </div >
     )
 }

@@ -36,7 +36,7 @@ export default function Overdraft() {
                         <span className='text-[#1E5EF3]'>Overdraft Limit</span>
                     </h1>
                     <p className="text-left mb-4 text-base font-medium text-[#101010] md:text-left md:text-xl md:font-medium w-full">
-                    Get an overdraft limit against your salary through
+                        Get an overdraft limit against your salary through
                         <span className='text-[#1E5EF3]'> Finisia.</span>
                     </p>
                     {/* <button onClick={() => setShowModal(true)} className="mt-7 font-semibold text-lg rounded-[5px] bg-gradient-to-r from-[#1E5EF3] to-[#134FDA] px-7 py-3 mx-auto md:mx-0 text-white font-semibold bg-red hover:opacity-90 py-3 px-10">
@@ -64,7 +64,14 @@ export default function Overdraft() {
                     </svg>
                 </div>
             </section>
-            <ApplyForm />
+            <div className="flex items-center flex-col relative justify-between py-[4rem] pb-[1rem] md:py-[5rem] px-4 m-8 sm:px-10 relative md:mx-32 bg-[#fbfbfb] rounded-xl">
+                <div className="flex items-center justify-center w-full">
+                    <p className="text-base md:text-xl">
+                    Getting an overdraft limit is complicated, we make it easy <span className='text-[#1E5EF3] font-semibold'> Apply Below </span>
+                    </p>
+                </div>
+                <ApplyForm />
+            </div>
 
             <section className='bg-black py-[5rem] px-4 sm:px-10 relative mt-12' >
                 <div className='flex flex-col items-center md:items-start justify-center mx-0 md:mx-32 self-center md:self-start'>
@@ -124,7 +131,7 @@ export default function Overdraft() {
                                     Starting at
                                 </div>
                                 <div className='text-[#1E5EF3] text-xl md:text-5xl font-semibold'>
-                                    12.75%
+                                    12.75 %
                                 </div>
                                 <div className='text-sm md:text-base text-white uppercase mt-2'>
                                     RATE OF INTEREST

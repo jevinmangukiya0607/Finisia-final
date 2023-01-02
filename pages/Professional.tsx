@@ -64,7 +64,14 @@ Finisia
                     </svg>
                 </div>
             </section>
-            <ApplyForm />
+            <div className="flex items-center flex-col relative justify-between m-8 py-[4rem] pb-[1rem] md:py-[5rem] px-4 sm:px-10 relative md:mx-32 bg-[#fbfbfb] rounded-xl">
+                <div className="flex items-center justify-center w-full">
+                    <p className="text-base md:text-xl">
+                    Your search for the ideal professional loan ends here <span className='text-[#1E5EF3] font-semibold'> Apply Below </span>
+                    </p>
+                </div>
+                <ApplyForm />
+            </div>
 
             {/* <ProfessionalFeature /> */}
             <section className='bg-black py-[5rem] px-4 sm:px-10 relative mt-12' >
@@ -125,7 +132,7 @@ Finisia
                                     Starting at
                                 </div>
                                 <div className='text-[#1E5EF3] text-xl md:text-5xl font-semibold'>
-                                    10.85 PA
+                                    10.85 %
                                 </div>
                                 <div className='text-sm md:text-base text-white uppercase mt-2'>
                                     RATE OF INTEREST

@@ -9,7 +9,7 @@ export const HowItsWorkItem = [
     },
     {
         id: '03',
-        desc: 'Compare quotes from top banks and financial institutes',
+        desc: 'Compare quotes from top banks and financial institution',
     },
     {
         id: '04',
