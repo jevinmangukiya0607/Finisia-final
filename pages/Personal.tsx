@@ -4,7 +4,7 @@ import HowItsWork from '../components/HowItsWork';
 import EMIcalculator from '../components/calculator';
 import LoanDoc from '../components/LoanDoc';
 import LoanFactor from '../components/LoanFactor';
-import PersonalFeature from '../components/Personalfeature';
+import PersonalFeature from '../components/PersonalFeature';
 import Banks from '../components/Banks';
 import PageHead from '../components/PageHead';
 import Modal from '../components/Modal';
