@@ -1,0 +1,250 @@
+.service-item:hover {
+    transition: 0.15s ease-in-out;
+}
+
+.service-item:hover .service-btn {
+    background: white;
+    color: #1E5EF3;
+    transition: 0.15s ease-in-out;
+}
+
+.howitsitem:hover .howitscard {
+    background: linear-gradient(180deg, #1E5EF3 0%, #134FDA 100%);
+    color: white;
+    transition: 0.25s ease-in-out;
+    transform: scale(1.01);
+}
+
+.howitsitem:hover .back-id {
+    color: #000;
+    transition: 0.25s ease-in-out;
+    margin-bottom: -45px;
+}
+
+.howitswork .howitscard-container:nth-child(2) {
+    margin-top: 70px;
+}
+
+.howitswork .howitscard-container:nth-child(3) {
+    margin-top: 140px;
+}
+
+.howitswork .howitscard-container:nth-child(4) {
+    margin-top: 230px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .howitswork .howitscard-container:nth-child(2),
+    .howitswork .howitscard-container:nth-child(3),
+    .howitswork .howitscard-container:nth-child(4) {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .howitsitem:hover .back-id {
+        margin-bottom: -25px;
+    }
+}
+
+
+.loantitle {
+    line-height: 50px;
+}
+
+.bullets {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+
+/* .bankcontainer{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background: #eaeaea;
+} */
+
+section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+section div.container {
+    transition: all 0.3s ease;
+}
+
+section div.container h1 {
+    margin: 15px 0 0 0;
+}
+
+section div.container h3 {
+    margin: 0 0 25px 0;
+}
+
+@media (max-width: 992px) {
+    section {
+        padding: 0 20px 0 20px;
+    }
+}
+
+section.slide-option {
+    margin: 0 0 50px 0;
+}
+
+section.slide-option .no-marg {
+    margin: 0 0 0 0;
+}
+
+div.highway-slider {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+}
+
+div.highway-slider div.highway-barrier {
+    overflow: hidden;
+    position: relative;
+}
+
+div.highway-slider ul.highway-lane {
+    display: flex;
+    height: 100%;
+}
+
+div.highway-slider ul.highway-lane li.highway-car {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #343434;
+}
+
+@keyframes translatestf {
+    0% {
+        transform: translateX(100%);
+    }
+    
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+#stffull div.highway-barrier ul.highway-lane {
+    width: 500%;
+}
+
+#stffull div.highway-barrier ul.highway-lane li.highway-car {
+    animation: translatestf 30s linear infinite;
+}
+
+#stffull div.highway-barrier ul.highway-lane li.highway-car h4 {
+    font-size: 28px;
+}
+
+@keyframes translateinfinite {
+    100% {
+        transform: translateX(calc(-2160px));
+    }
+}
+
+#infinite div.highway-barrier {
+    background: #000;
+    box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.3);
+}
+
+#infinite div.highway-barrier::before,
+#infinite div.highway-barrier::after {
+    content: " ";
+    position: absolute;
+    z-index: 9;
+    width: 100px;
+    height: 100%;
+}
+
+
+#infinite div.highway-barrier::before {
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #000 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#infinite div.highway-barrier::after {
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, #000 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#infinite div.highway-barrier ul.highway-lane {
+    width: calc(4320px);
+}
+
+#infinite div.highway-barrier ul.highway-lane li.highway-car {
+    width: 180px;
+    animation: translateinfinite 25s linear infinite;
+}
+
+
+.hCldjG {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 24px;
+    padding: 0px 200px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.iLoOjr {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.hBqLhy {
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.18px;
+    line-height: 69px;
+    white-space: pre-line;
+    margin-top: 120px;
+}
+
+.bFeeNf {
+    margin-top: 70px;
+    margin-bottom: 180px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0.65px;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.emi-field {
+    padding: 0px !important;
+}
+
+
+@media screen and (max-width: 660px) {
+    .hCldjG{
+        padding: 0 50px;
+    }
+
+    .hBqLhy{
+        margin-top: 50px;
+        font-size: 40px;
+        line-height: 64px;
+    }
+
+    .bFeeNf{
+        margin-top: 50px;
+    }
+}
