@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { PROFESSIONAL_FEATURE } from 'constants/ProfessionalFeature';
+import { PROFESSIONAL_FEATURE } from 'constants/Professionalfeature';
 
 export default function ProfessionalFeature() {
   return (
