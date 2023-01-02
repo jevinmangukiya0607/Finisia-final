@@ -4,10 +4,10 @@ import { PROFESSIONAL_FEATURE } from 'constants/Professionalfeature';
 
 export default function ProfessionalFeature() {
   return (
-      <div className="flex items-center justify-evenly ">
+      <div className="flex flex-col md:flex-row items-center justify-evenly ">
         {PROFESSIONAL_FEATURE.map(item => (
           <div
-            className="flex justify-evenly items-center"
+            className="flex mt-2 md:mt-0 justify-evenly items-center"
             key={item.desc}
           >
             <div className='pr-5'>

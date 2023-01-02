@@ -21,7 +21,7 @@ export default function Professional() {
             <section className="flex flex-col relative md:flex-row items-center justify-between py-20 px-8 pb-[8rem] lg:px-20">
                 <div className="flex flex-col items-start max-w-sm lg:max-w-xl">
                     <h1 className="text-3xl font-bold text-center text-black mb-3 md:text-4xl md:text-left lg:text-5xl lg:leading-[66px]">
-                    Expand or start your own practice with the help of professional loans through
+                        Expand or start your own practice with the help of professional loans through
                         <span className='text-[#1E5EF3]'> Finisia.</span>
                     </h1>
                     {/* <p className="text-center mt-3 text-base font-medium text-[#101010] md:text-left md:text-2xl md:font-medium w-full">
@@ -65,37 +65,64 @@ export default function Professional() {
                     <div className='text-white text-xl md:text-[33px] font-semibold'>
                         What is Professional Loan?
                     </div>
-                    <div className='text-[#B5B5B5] text-base md:text-xl mt-4 text-center'>
+                    <div className='text-[#B5B5B5] text-base md:text-xl mt-4 text-center md:text-left'>
                         Professional loans are tailor made loans to suit the financial needs for CA’s and doctor to expand or start their office.
                     </div>
                 </div>
                 <div className='flex flex-col md:flex-row items-center justify-evenly mt-14 w-full mx-32'>
-                    <div className='flex flex-col md:flex-row items-left  justify-evenly w-1/2 sm:w-1/4 md:w-full'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-[#1E5EF3] text-2xl md:text-5xl font-semibold'>
-                                <span className='text-2xl'>upto  </span>1 Crore
-                            </div>
-                            <div className='text-sm md:text-base text-white uppercase mt-2'>
-                                amount
+                    <div className='flex flex-col md:flex-row items-start  justify-evenly w-1/2 sm:w-1/4 md:w-full'>
+                        <div className='flex items-center justify-center'>
+                            <Image
+                                src="/feature-amount.svg"
+                                alt="Amount"
+                                width={24}
+                                height={24}
+                                className="mr-4"
+                            />
+                            <div className='flex flex-col items-start justify-center'>
+                                <div className='text-[#1E5EF3] text-xl md:text-5xl font-semibold'>
+                                    <span className='text-xl'>upto  </span>1 Crore
+                                </div>
+                                <div className='text-sm md:text-base text-white uppercase mt-2'>
+                                    amount
+                                </div>
                             </div>
                         </div>
-                        <div className='flex flex-col items-start mt-4 sm:mt-0 justify-center'>
-                            <div className='text-[#1E5EF3] text-2xl md:text-5xl font-semibold'>
-                                <span className='text-2xl'>upto  </span> 96
-                            </div>
-                            <div className='text-sm md:text-base text-white uppercase mt-2'>
-                                TENURE (months)
+                        <div className='flex items-center justify-center mt-2 md:mt-0'>
+                            <Image
+                                src="/feature-time.svg"
+                                alt="Amount"
+                                width={24}
+                                height={24}
+                                className="mr-4"
+                            />
+                            <div className='flex flex-col items-start mt-4 sm:mt-0 justify-center'>
+                                <div className='text-[#1E5EF3] text-xl md:text-5xl font-semibold'>
+                                    <span className='text-xl'>upto  </span> 96
+                                </div>
+                                <div className='text-sm md:text-base text-white uppercase mt-2'>
+                                    TENURE (months)
+                                </div>
                             </div>
                         </div>
-                        <div className='flex flex-col items-start mt-4 sm:mt-0 justify-center'>
-                            <div className='text-sm text-white mb-2 opacity-75'>
-                                Starting at
-                            </div>
-                            <div className='text-[#1E5EF3] text-2xl md:text-5xl font-semibold'>
-                                10.85 PA
-                            </div>
-                            <div className='text-sm md:text-base text-white uppercase mt-2'>
-                                RATE OF INTEREST
+                        <div className='flex items-center justify-center mt-2 md:mt-0'>
+                            <Image
+                                src="/feature-roi.svg"
+                                alt="Amount"
+                                width={24}
+                                height={24}
+                                className="mr-4"
+                            />
+                            <div className='flex flex-col items-start mt-4 sm:mt-0 justify-center'>
+                                <div className='text-sm text-white mb-2 opacity-75'>
+                                    Starting at
+                                </div>
+                                <div className='text-[#1E5EF3] text-xl md:text-5xl font-semibold'>
+                                    10.85 PA
+                                </div>
+                                <div className='text-sm md:text-base text-white uppercase mt-2'>
+                                    RATE OF INTEREST
+                                </div>
                             </div>
                         </div>
                     </div>

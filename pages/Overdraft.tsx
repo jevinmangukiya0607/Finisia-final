@@ -22,10 +22,10 @@ export default function Overdraft() {
             <section className="flex flex-col relative md:flex-row items-center justify-between py-20 px-8 pb-[8rem] lg:px-20">
                 <div className="flex flex-col items-start max-w-sm lg:max-w-xl">
                     <h1 className="text-3xl font-bold text-center text-black mb-3 md:text-4xl md:text-left lg:text-5xl lg:leading-[66px]">
-                    Get an overdraft limit against your salary through 
+                        Get an overdraft limit against your salary through
                         <span className='text-[#1E5EF3]'> Finisia.</span>
                     </h1>
-                    {/* <p className="text-center mt-3 text-base font-medium text-[#101010] md:text-left md:text-2xl md:font-medium w-full">
+                    {/* <p className="text-center mt-3 text-base font-medium text-[#101010] md:text-left md:text-xl md:font-medium w-full">
                         Change apply to od limit page to
                         Easy re payment options
                     </p> */}
@@ -46,6 +46,7 @@ export default function Overdraft() {
                         alt="Finisia"
                         width={572}
                         height={515}
+                        className="scale-125"
                     />
                 </div>
                 <div className="custom-shape-divider-bottom">
@@ -68,37 +69,64 @@ export default function Overdraft() {
                     <div className='text-white text-xl md:text-[33px] font-semibold'>
                         What is Overdraft Limit ?
                     </div>
-                    <div className='text-[#B5B5B5] text-base md:text-xl mt-4 text-center'>
-                    Dropline Overdraft limit allows you to withdraw an amount at any time, and repay it as per your convenience. This makes it the most preferred credit option to meet various types of personal funding requirements, without any limit.
+                    <div className='text-[#B5B5B5] text-base md:text-xl mt-4 text-center md:text-left'>
+                        Dropline Overdraft limit allows you to withdraw an amount at any time, and repay it as per your convenience. This makes it the most preferred credit option to meet various types of personal funding requirements, without any limit.
                     </div>
                 </div>
                 <div className='flex flex-col md:flex-row items-center justify-evenly mt-14 w-full mx-32'>
                     <div className='flex flex-col md:flex-row items-left  justify-evenly w-1/2 sm:w-1/4 md:w-full'>
-                        <div className='flex flex-col items-start justify-center'>
-                            <div className='text-[#1E5EF3] text-2xl md:text-5xl font-semibold'>
-                                0-35 <span className='text-2xl'>Lakh</span>
-                            </div>
-                            <div className='text-sm md:text-base text-white uppercase mt-2'>
-                                amount
+                        <div className='flex items-center justify-center'>
+                            <Image
+                                src="/feature-amount.svg"
+                                alt="Amount"
+                                width={24}
+                                height={24}
+                                className="mr-4"
+                            />
+                            <div className='flex flex-col items-start justify-center'>
+                                <div className='text-[#1E5EF3] text-xl md:text-5xl font-semibold'>
+                                    0-35 <span className='text-xl'>Lakh</span>
+                                </div>
+                                <div className='text-sm md:text-base text-white uppercase mt-2'>
+                                    amount
+                                </div>
                             </div>
                         </div>
-                        <div className='flex flex-col items-start mt-4 sm:mt-0 justify-center'>
-                            <div className='text-[#1E5EF3] text-2xl md:text-5xl font-semibold'>
-                                12-84
-                            </div>
-                            <div className='text-sm md:text-base text-white uppercase mt-2'>
-                                TENURE (months)
+                        <div className='flex items-center justify-center'>
+                            <Image
+                                src="/feature-time.svg"
+                                alt="Amount"
+                                width={24}
+                                height={24}
+                                className="mr-4"
+                            />
+                            <div className='flex flex-col items-start mt-4 sm:mt-0 justify-center'>
+                                <div className='text-[#1E5EF3] text-xl md:text-5xl font-semibold'>
+                                    12-84
+                                </div>
+                                <div className='text-sm md:text-base text-white uppercase mt-2'>
+                                    TENURE (months)
+                                </div>
                             </div>
                         </div>
-                        <div className='flex flex-col items-start mt-4 sm:mt-0 justify-center'>
-                            <div className='text-sm text-white mb-2 opacity-75'>
-                                Starting at
-                            </div>
-                            <div className='text-[#1E5EF3] text-2xl md:text-5xl font-semibold'>
-                                12.75%
-                            </div>
-                            <div className='text-sm md:text-base text-white uppercase mt-2'>
-                                RATE OF INTEREST
+                        <div className='flex items-center justify-center'>
+                            <Image
+                                src="/feature-roi.svg"
+                                alt="Amount"
+                                width={24}
+                                height={24}
+                                className="mr-4"
+                            />
+                            <div className='flex flex-col items-start mt-4 sm:mt-0 justify-center'>
+                                <div className='text-sm text-white mb-2 opacity-75'>
+                                    Starting at
+                                </div>
+                                <div className='text-[#1E5EF3] text-xl md:text-5xl font-semibold'>
+                                    12.75%
+                                </div>
+                                <div className='text-sm md:text-base text-white uppercase mt-2'>
+                                    RATE OF INTEREST
+                                </div>
                             </div>
                         </div>
                     </div>

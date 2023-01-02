@@ -1,16 +1,16 @@
 export const PROFESSIONAL_FEATURE= [
     {
-      img: '/bank.png',
+      img: '/icons/eligible.svg',
       desc: 'Simple eligibility criteria',
       
     },
     {
-      img: '/bank.png',
+      img: '/icons/documents.svg',
       desc: 'Minimal documentation',
       
     },
     {
-      img: '/bank.png',
+      img: '/icons/distribute.svg',
       desc: 'Quick disbursal of funds',
       
     },

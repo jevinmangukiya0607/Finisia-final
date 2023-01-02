@@ -1,16 +1,16 @@
 export const PERSONAL_FEATURE= [
     {
-      img: '/bank.png',
+      img: '/icons/compare.svg',
       desc: 'Compare quotes from top banks',
       
     },
     {
-      img: '/bank.png',
+      img: '/icons/varified.svg',
       desc: 'Instant approval ',
       
     },
     {
-      img: '/bank.png',
+      img: '/icons/maximumloan.svg',
       desc: 'Maximum loan eligibility',
       
     },
