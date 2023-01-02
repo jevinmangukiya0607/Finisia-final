@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import HowItsWork from '../components/HowItsWork';
-import PersonalFeature from '../components/Personalfeature';
+import PersonalFeature from '../components/PersonalFeature';
 import WhyFinisia from '../components/WhyFinisia';
 import OverdraftAdv from '../components/OverdraftAdv';
 import Banks from '../components/Banks';

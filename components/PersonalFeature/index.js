@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { PERSONAL_FEATURE } from 'constants/PersonalFeature';
+import { PERSONAL_FEATURE } from 'constants/Personalfeature';
 
 export default function PersonalFeature() {
   return (
