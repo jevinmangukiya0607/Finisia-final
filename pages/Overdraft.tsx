@@ -42,7 +42,7 @@ export default function Overdraft() {
                 </div>
                 <div className="mt-16 md:mt-0">
                     <Image
-                        src="/home-hero.png"
+                        src="/odlimit.svg"
                         alt="Finisia"
                         width={572}
                         height={515}
