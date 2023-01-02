@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <div className="my-4 md:my-0 md:mt-0 ">
           <Image
-            src="/herobanner.png"
+            src="/hero-main.svg"
             alt="Finisia"
             width={577}
             height={433}

@@ -4,18 +4,20 @@ import { PROFESSIONAL_FEATURE } from 'constants/Professionalfeature';
 
 export default function ProfessionalFeature() {
   return (
-      <div className="flex flex-col md:flex-row items-center justify-evenly ">
-        {PROFESSIONAL_FEATURE.map(item => (
-          <div
-            className="flex mt-2 md:mt-0 justify-evenly items-center"
-            key={item.desc}
-          >
-            <div className='pr-5'>
-              <Image src={item.img} alt='⚪' width={24} height={24} />
-            </div>
-            <p className="text-sm text-left font-medium sm:text-lg">{item.desc}</p>
+    <div className="flex mt-0 md:mt-4 flex-col lg:flex-row items-start lg:items-center justify-evenly">
+      {PROFESSIONAL_FEATURE.map(item => (
+        <div
+          className="flex mt-4 mr-8 lg:mt-0 justify-evenly items-center"
+          key={item.desc}
+        >
+          <div className='pr-2'>
+            <Image src={item.img} alt='⚪' width={20} height={20} className="fill-black"   />
           </div>
-        ))}
-      </div>
-  );
+          <p className="text-sm text-left font-medium sm:text-base">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+);
 }
+
+

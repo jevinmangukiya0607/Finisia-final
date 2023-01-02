@@ -1,12 +1,12 @@
 export const PERSONAL_FEATURE= [
     {
       img: '/icons/compare.svg',
-      desc: 'Compare quotes from top banks',
+      desc: 'Compare quotes from top banks and NBFC’s',
       
     },
     {
       img: '/icons/varified.svg',
-      desc: 'Instant approval ',
+      desc: 'Quick approval',
       
     },
     {

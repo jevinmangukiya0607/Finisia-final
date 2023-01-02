@@ -30,9 +30,9 @@ export default function Services() {
             className="service-item flex flex-col border-transparent items-left px-8 py-8 rounded-xl border-2 max-w-[300px] m-4 mx-4 bg-white drop-shadow-[0_0_50px_rgba(0,0,0,0.05)] hover:drop-shadow-[0_0_169px_rgba(0,0,0,0.2)] hover:bg-gradient-to-r from-[#1E5EF3] to-[#134FDA] hover:text-white sm:mx-12"
             key={item.title}
           >
-            <div>
+            {/* <div>
               <Image src={item.img} alt={item.title} width={100} height={100} />
-            </div>
+            </div> */}
             <p className="mt-6 font-semibold text-left text-xl sm:text-2xl">
               {item.title}
             </p>

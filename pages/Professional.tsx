@@ -7,7 +7,7 @@ import ProfessionalFeature from '../components/ProfessionalFeature';
 import Banks from '../components/Banks';
 import PageHead from '../components/PageHead';
 import Modal from '../components/Modal';
-
+import ApplyForm from '../components/ApplyForm';
 
 export default function Professional() {
     const [showModal, setShowModal] = useState(false);
@@ -18,33 +18,38 @@ export default function Professional() {
                 title="Professional Loan | Finisia"
                 description="Finance made simple, smooth and affordable. Finisia deals with all things regarding your personal finance requirement, so that you don’t have to."
             />
-            <section className="flex flex-col relative md:flex-row items-center justify-between py-20 px-8 pb-[8rem] lg:px-20">
-                <div className="flex flex-col items-start max-w-sm lg:max-w-xl">
-                    <h1 className="text-3xl font-bold text-center text-black mb-3 md:text-4xl md:text-left lg:text-5xl lg:leading-[66px]">
-                        Expand or start your own practice with the help of professional loans through
-                        <span className='text-[#1E5EF3]'> Finisia.</span>
-                    </h1>
-                    {/* <p className="text-center mt-3 text-base font-medium text-[#101010] md:text-left md:text-2xl md:font-medium w-full">
-                       
-                    </p> */}
-                    <button onClick={() => setShowModal(true)} className="mt-7 font-semibold text-lg rounded-[5px] bg-gradient-to-r from-[#1E5EF3] to-[#134FDA] px-7 py-3 mx-auto md:mx-0 text-white font-semibold bg-red hover:opacity-90 py-3 px-10">
-                        Apply Now
-                    </button>
 
-                    <Modal title="enquiry form"
-                        onClose={() => setShowModal(false)}
-                        show={showModal}            >
-                        Finisia
-                    </Modal>
+            <section className="flex items-center flex-col relative md:flex-row justify-start py-[1rem] md:py-[5rem] px-4 sm:px-10 relative md:mx-32">
+
+                {/* <div className="my-8 lg:mb-0 md:mt-0 ">
+<Image
+src="/home-hero.png"
+alt="Finisia"
+width={200}
+height={200}
+/>
+</div> */}
+
+
+                <div className="flex flex-col items-start ml-0">
+                    <h1 className="text-3xl font-bold text-center text-black mb-2 md:text-4xl md:text-left lg:text-5xl lg:leading-[66px]">
+                        <span className='text-[#1E5EF3]'>Professional Loan</span>
+                    </h1>
+                    <p className="text-left mb-4 text-base font-medium text-[#101010] md:text-left md:text-xl md:font-medium w-full">
+                    Expand or start your own practice with the help of professional loans through 
+                        <span className='text-[#1E5EF3]'> Finisia.</span>
+                    </p>
+                    {/* <button onClick={() => setShowModal(true)} className="mt-7 font-semibold text-lg rounded-[5px] bg-gradient-to-r from-[#1E5EF3] to-[#134FDA] px-7 py-3 mx-auto md:mx-0 text-white font-semibold bg-red hover:opacity-90 py-3 px-10">
+Apply Now
+</button> */}
+                    <ProfessionalFeature />
+                    {/* <Modal title="enquiry form"
+onClose={() => setShowModal(false)}
+show={showModal}            >
+Finisia
+</Modal> */}
                 </div>
-                <div className="mt-16 md:mt-0">
-                    <Image
-                        src="/professionalloan.svg"
-                        alt="professional"
-                        width={572}
-                        height={515}
-                    />
-                </div>
+
                 <div className="custom-shape-divider-bottom">
                     <svg
                         data-name="Layer 1"
@@ -59,7 +64,9 @@ export default function Professional() {
                     </svg>
                 </div>
             </section>
-            <ProfessionalFeature />
+            <ApplyForm />
+
+            {/* <ProfessionalFeature /> */}
             <section className='bg-black py-[5rem] px-4 sm:px-10 relative mt-12' >
                 <div className='flex flex-col items-center md:items-start justify-center mx-0 md:mx-32 self-center md:self-start'>
                     <div className='text-white text-xl md:text-[33px] font-semibold'>
