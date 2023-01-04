@@ -254,7 +254,7 @@ export default function ApplyForm() {
                         <label for="monthlyincome" className="text-sm mb-1 ml-1 mt-4 md:mt-4 lg:mt-0">Monthly Income</label>
                         <select value={monthlyincome}
                                 onChange={(e) => {
-                                    setAmountrequired(e.target.value);
+                                    setMonthlyincome(e.target.value);
                                 }} name="monthlyincome" id="monthlyincome" className="border   w-full  rounded col-12 col-sm-12 col-md-6 col-lg-3 border-zinc-200 outline-[#1e5ef3] p-3">
                                 <option value="" disabled selected hidden>Monthly Income</option>
                                 <option value="0-30000">30,000 below</option>
