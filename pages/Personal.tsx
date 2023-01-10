@@ -71,8 +71,11 @@ export default function Personal() {
                     Your search for the ideal personal loan ends here <span className='text-[#1E5EF3] font-semibold'> Apply Below </span>
                     </p>
                 </div>
-                <ApplyForm />
+                <ApplyForm category={{ 
+          name: 'Personal Loan'
+        }}/>
             </div>
+
 
             <section className='bg-black py-[5rem] px-4 sm:px-10 relative mt-12' >
                 <div className='flex flex-col items-center md:items-start justify-center mx-0 md:mx-32 self-center md:self-start'>

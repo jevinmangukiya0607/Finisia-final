@@ -70,7 +70,9 @@ export default function Overdraft() {
                     Getting an overdraft limit is complicated, we make it easy <span className='text-[#1E5EF3] font-semibold'> Apply Below </span>
                     </p>
                 </div>
-                <ApplyForm />
+                <ApplyForm category={{ 
+          name: 'Overdraft Limit'
+        }} />
             </div>
 
             <section className='bg-black py-[5rem] px-4 sm:px-10 relative mt-12' >

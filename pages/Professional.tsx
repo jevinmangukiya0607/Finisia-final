@@ -70,7 +70,9 @@ Finisia
                     Your search for the ideal professional loan ends here <span className='text-[#1E5EF3] font-semibold'> Apply Below </span>
                     </p>
                 </div>
-                <ApplyForm />
+                <ApplyForm category={{ 
+          name: 'Professional Loan'
+        }} />
             </div>
 
             {/* <ProfessionalFeature /> */}
