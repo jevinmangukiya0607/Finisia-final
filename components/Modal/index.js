@@ -35,7 +35,7 @@ const Modal = ({ show, onClose, children, title }) => {
     } else {
       // firebaseDb.child("contacts").push(state);
       setState({ firstname: "", phone: "", email: "", amountrequired: "", statename: "", cityname: "" });
-      toast.success("Form Submitted Successfully");
+      toast.success("Thanks, Our team will reach out to you within 24 hours");
       emailjs.sendForm('service_yd2sdfa', 'template_w6bvw32', form.current, 'hbRwWId7I_ouVTakY')
         .then((result) => {
           console.log(result.text);

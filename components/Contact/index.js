@@ -18,7 +18,7 @@ export default function Contact() {
         } else {
             // firebaseDb.child("contacts").push(state);
             setValues({ name: "", email: "", phone: "", subject: "", message: "" });
-            toast.success("Form Submitted Successfully");
+            toast.success("Thanks, Our team will reach out to you within 24 hours");
             emailjs.sendForm('service_yd2sdfa', 'template_zshcsg8', form.current, 'hbRwWId7I_ouVTakY')
                 .then((result) => {
                     console.log(result.text);
