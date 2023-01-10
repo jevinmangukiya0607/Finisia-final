@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef} from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from "react-toastify";
 
 const Modal = ({ show, onClose, children, title }) => {
@@ -15,24 +16,32 @@ const Modal = ({ show, onClose, children, title }) => {
     onClose();
   };
 
+  const form = useRef();
+
   const [state, setState] = useState({
-    name: "",
-    number: "",
+    firstname: "",
+    phone: "",
     email: "",
-    amount: "",
-    rajstate: "",
-    city: "",
+    amountrequired: "",
+    statename: "",
+    cityname: "",
   });
 
-  const { name, number, email, amount, rajstate, city } = state;
+  const { firstname, phone, email, amountrequired, statename, cityname } = state;
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!name || !number || !email || !amount || !rajstate || !city) {
+    if (!firstname || !phone || !email || !amountrequired || !statename || !cityname) {
       toast.error("Please provide value in each input field");
     } else {
       // firebaseDb.child("contacts").push(state);
-      setState({ name: "", number: "", email: "", amount: "", rajstate: "", city: "" });
+      setState({ firstname: "", phone: "", email: "", amountrequired: "", statename: "", cityname: "" });
       toast.success("Form Submitted Successfully");
+      emailjs.sendForm('service_yd2sdfa', 'template_w6bvw32', form.current, 'hbRwWId7I_ouVTakY')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
     }
   };
 
@@ -58,6 +67,7 @@ const Modal = ({ show, onClose, children, title }) => {
             </div>
             <h3 className="self-start font-medium text-xl md:text-2xl">👉 Apply here</h3>
             <form
+              ref={form}
               id="contactForm"
               className="contactForm w-full"
               onSubmit={handleSubmit}
@@ -68,10 +78,10 @@ const Modal = ({ show, onClose, children, title }) => {
                     <input
                       type="text"
                       className="w-full rounded border-black/20 border outline-0 p-2 md:py-3 md:px-4"
-                      name="name"
-                      placeholder="Name"
+                      name="firstname"
+                      placeholder="Full Name"
                       onChange={handleInputChange}
-                      value={name}
+                      value={firstname}
                     />
                   </div>
                 </div>
@@ -80,10 +90,10 @@ const Modal = ({ show, onClose, children, title }) => {
                     <input
                       type="text"
                       className="w-full rounded border-black/20 border outline-0 p-2 md:py-3 md:px-4"
-                      name="number"
+                      name="phone"
                       placeholder="Phone Number"
                       onChange={handleInputChange}
-                      value={number}
+                      value={phone}
                     />
                   </div>
                 </div>
@@ -104,10 +114,10 @@ const Modal = ({ show, onClose, children, title }) => {
                     <input
                       type="number"
                       className="w-full rounded border-black/20 border outline-0 p-2 md:py-3 md:px-4"
-                      name="amount"
+                      name="amountrequired"
                       placeholder="Amount Required"
                       onChange={handleInputChange}
-                      value={amount}
+                      value={amountrequired}
                     />
                   </div>
                 </div>
@@ -116,10 +126,10 @@ const Modal = ({ show, onClose, children, title }) => {
                     <input
                       type="text"
                       className="w-full rounded border-black/20 border outline-0 p-2 md:py-3 md:px-4"
-                      name="rajstate"
+                      name="statename"
                       placeholder="State"
                       onChange={handleInputChange}
-                      value={rajstate}
+                      value={statename}
                     />
                   </div>
                 </div>
@@ -128,10 +138,10 @@ const Modal = ({ show, onClose, children, title }) => {
                     <input
                       type="text"
                       className="w-full rounded border-black/20 border outline-0 p-2 md:py-3 md:px-4"
-                      name="city"
+                      name="cityname"
                       placeholder="City"
                       onChange={handleInputChange}
-                      value={city}
+                      value={cityname}
                     />
                   </div>
                 </div>

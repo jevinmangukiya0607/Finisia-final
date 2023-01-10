@@ -9,91 +9,6 @@ export default function ApplyForm ({ category }) {
 
     const form = useRef();
 
-    // const [firstname, setFirstname] = useState("");
-    // const [lastname, setLastname] = useState("");
-    // const [cityname, setCityname] = useState("");
-    // const [statename, setStatename] = useState("");
-    // const [email, setEmail] = useState("");
-    // const [amountrequired, setAmountrequired] = useState("");
-    // const [phone, setPhone] = useState("");
-    // const [monthlyincome, setMonthlyincome] = useState("");
-
-
-    //   Form validation
-    const [errors, setErrors] = useState({});
-
-    //   Setting button text
-    const [buttonText, setButtonText] = useState("Send");
-
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-    const [showFailureMessage, setShowFailureMessage] = useState(false);
-
-    const handleValidation = () => {
-        let tempErrors = {};
-        let isValid = true;
-
-        if (firstname.length <= 0) {
-            tempErrors["firstname"] = true;
-            isValid = false;
-        }
-        if (lastname.length <= 0) {
-            tempErrors["lastname"] = true;
-            isValid = false;
-        }
-        if (cityname.length <= 0) {
-            tempErrors["cityname"] = true;
-            isValid = false;
-        }
-        if (statename.length <= 0) {
-            tempErrors["statename"] = true;
-            isValid = false;
-        }
-        if (amountrequired.length <= 0) {
-            tempErrors["amountrequired"] = true;
-            isValid = false;
-        }
-        if (email.length <= 0) {
-            tempErrors["email"] = true;
-            isValid = false;
-        }
-        if (phone.length <= 0) {
-            tempErrors["phone"] = true;
-            isValid = false;
-        }
-        if (monthlyincome.length <= 0) {
-            tempErrors["monthlyincome"] = true;
-            isValid = false;
-        }
-
-        setErrors({ ...tempErrors });
-        console.log("errors", errors);
-        return isValid;
-    };
-
-    //   const [form, setForm] = useState(false);
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-
-    //     let isValidForm = handleValidation();
-    //     // console.log(isValidForm);
-
-    //     // if (isValidForm) {
-    //     //     setButtonText("Sending");
-    //     //     setValues({ firstname: "", lastname: "", cityname: "", statename: "", amountrequired: "", email: "", phone: "", monthlyincome: "" });
-    //     //     toast.success("Form Submitted Successfully");
-    //     //     emailjs.sendForm('service_w168mhr', 'template_zoun2in', form.current, 'vNLayYzfxJy_djaZn')
-    //     //         .then((result) => {
-    //     //             console.log(result.text);
-    //     //         }, (error) => {
-    //     //             console.log(error.text);
-    //     //         });
-
-    //     // }
-
-    // };
-
-
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -251,18 +166,7 @@ export default function ApplyForm ({ category }) {
                                                             className="font-semibold text-lg rounded-[5px] bg-gradient-to-r from-[#1E5EF3] to-[#134FDA] px-12 py-3 mx-auto md:mx-0 text-white font-semibold bg-red hover:opacity-90 py-3 px-10 w-fit"
                                                         />
                     </div>
-                    <div className="text-left">
-                        {showSuccessMessage && (
-                            <p className="text-green-500 font-semibold text-sm my-2">
-                                Thankyou! Your Message has been delivered.
-                            </p>
-                        )}
-                        {showFailureMessage && (
-                            <p className="text-red-500">
-                                Oops! Something went wrong, please try again.
-                            </p>
-                        )}
-                    </div>
+
                 </div>
             </form >
         </div >

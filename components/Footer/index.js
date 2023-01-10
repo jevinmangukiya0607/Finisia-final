@@ -50,16 +50,13 @@ export default function Footer() {
                   Social Media
                 </li>
                 <li className='my-1 md:my-4 opacity-80 text-sm md:text-base cursor-pointer'>
-                  Linkedin
+                  <Link href="https://www.linkedin.com/company/finisia/" target="_blank">Linkedin</Link>
                 </li>
                 <li className='my-1 md:my-4 opacity-80 text-sm md:text-base cursor-pointer'>
-                  Twitter
+                  <Link href="https://www.facebook.com/finisiaconsultants" target="_blank">Facebook</Link>
                 </li>
                 <li className='my-1 md:my-4 opacity-80 text-sm md:text-base cursor-pointer'>
-                  Facebook
-                </li>
-                <li className='my-1 md:my-4 opacity-80 text-sm md:text-base cursor-pointer'>
-                  Instagram
+                  <Link href="https://www.instagram.com/finisia.in/?hl=en" target="_blank">Instagram</Link>
                 </li>
               </ul>
             </div>
@@ -69,19 +66,19 @@ export default function Footer() {
                   Contact
                 </li>
                 <li className='my-1 md:my-4 opacity-80 text-sm md:text-base cursor-pointer'>
-                  {/* <Link href="mailto:finisia@rediffmail.com"> */}
+                  <a href="mailto:finisia@rediffmail.com">
                   finisia@rediffmail.com
-                  {/* </Link> */}
+                  </a>
                 </li>
                 <li className='my-1 md:my-4 opacity-80 text-sm md:text-base cursor-pointer'>
-                  {/* <Link href="tel:+917292066660"> */}
+                  <a href="tel:+917292066660">
                   7292066660
-                  {/* </Link> */}
+                  </a>
                 </li>
                 <li className='my-1 md:my-4 opacity-80 text-sm md:text-base cursor-pointer'>
-                  {/* <Link> */}
+                  <a>
                   Delhi, India
-                  {/* </Link> */}
+                  </a>
                 </li>
               </ul>
             </div>
